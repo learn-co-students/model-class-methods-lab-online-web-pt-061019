@@ -5,7 +5,7 @@ class Boat < ActiveRecord::Base
 
   def self.first_five
     # all.limit(5)
-    self.limit(5)
+    self.all.limit(5)
   end
 
   def self.dinghy
@@ -15,7 +15,6 @@ class Boat < ActiveRecord::Base
   end
 
   def self.ship
-    
     # where("length >= 20")
     self.where("length >= 20")
   end
